@@ -1,5 +1,5 @@
 import { Route, Routes, BrowserRouter } from "react-router-dom";
-import Tabela from "./Componentes/Telas/tabela/tabelaCandidato";
+import DetalhesCandidato from "./Componentes/Telas/DetalhesCandidato";
 import TelaPrincipal from "./Componentes/Telas/TelaPrincipal";
 import bootstrap from "bootstrap/dist/css/bootstrap.min.css";
 function App() {
@@ -8,7 +8,7 @@ function App() {
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={<TelaPrincipal />} />
-                <Route path="/candidato" element={<Tabela />} />
+                <Route path="/candidato" element={<DetalhesCandidato />} />
             </Routes>
         </BrowserRouter>
     </div>
