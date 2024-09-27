@@ -13,8 +13,7 @@ export default function TelaPrincipal(props) {
                 detalharCandidato ? (
                     <DetalhesCandidato />
                 ) : (
-                    <GridCandidatos listaCandidatos={listaCandidatos} 
-                                    setDetalharCandidato={detalharCandidato}/>
+                    <GridCandidatos listaCandidatos={listaCandidatos}  />
                 )
             }
         </Pagina>

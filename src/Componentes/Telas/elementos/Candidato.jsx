@@ -2,15 +2,14 @@ import { Button, Card } from "react-bootstrap";
 
 export default function Candidato(props) {
     let contador=0;
+    let contador2=0;
+
     function curtidas(){
         contador += 1;
-        document.getElementById('contador').innerText = contador;
     }
 
     function descurtidas(){
-        contador -= 1;
-        document.getElementById('contador').innerText = contador;
-
+        contador2 -= 1;
     }
 
     return (
@@ -21,7 +20,7 @@ export default function Candidato(props) {
                 <Card.Text>
                     <p>{"Email: " + props.candidato.email}</p>
                     <p id="contador">{"Curtidas: "}{ contador }</p>
-                    <p id="contador">{"Curtidas: "}{ contador }</p>
+                    <p id="contador2">{"Curtidas: "}{ contador2 }</p>
                     <p>{"Questionamentos: 0"}</p>
                 </Card.Text>
                 <Button variant="primary" onClick={curtidas()}> {//Curtir
