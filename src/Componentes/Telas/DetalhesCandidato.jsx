@@ -36,7 +36,7 @@ export default function DetalhesCandidato(props) {
                 </Table>
                 <Button className="mb-3" variant="primary"
                     onClick={() => {
-                        props.detalharCandidato(false);
+                        props.setDetalharCandidato(false);
                     }}>
                     Voltar
                 </Button>
