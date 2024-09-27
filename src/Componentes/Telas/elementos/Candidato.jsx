@@ -4,12 +4,22 @@ export default function Candidato(props) {
     let contador=0;
     let contador2=0;
 
+    const atualizarContador = () => {
+        document.getElementById('conta').innerText = contador;
+    };
+    const atualizarContador2 = () => {
+        document.getElementById('conta2').innerText = contador2;
+    };
+
     function curtidas(){
         contador += 1;
+        atualizarContador();
     }
 
     function descurtidas(){
         contador2 -= 1;
+        atualizarContador2();
+
     }
 
     return (
@@ -19,8 +29,8 @@ export default function Candidato(props) {
                 <Card.Title>{"candidato: " + props.candidato.nome}</Card.Title>
                 <Card.Text>
                     <p>{"Email: " + props.candidato.email}</p>
-                    <p id="contador">{"Curtidas: "}{ contador }</p>
-                    <p id="contador2">{"Curtidas: "}{ contador2 }</p>
+                    <p id="conta" >{"Curtidas: "}{ contador }</p>
+                    <p id="conta2" >{"Descurtidas: "}{ contador2 }</p>
                     <p>{"Questionamentos: 0"}</p>
                 </Card.Text>
                 <Button variant="primary" onClick={curtidas}> {//Curtir
